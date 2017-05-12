@@ -1,0 +1,75 @@
+.gameContainer {
+    height: 100%;
+}
+.playerWrapper {
+    border: 1px solid black;
+    height: 25em;
+    margin: 0 auto;
+}
+.playerWrapper:nth-child(even) {
+    border-top: none;
+}
+.player {
+}
+.playerNameLifeView {
+    display: inline-block;
+    float: right;
+    transform: rotate(180deg);
+}
+.playerName {
+    border-bottom: 1px solid black;
+    height: 5em; 
+}
+.playerName h3 { display: inline; }
+
+.row.playerLife div { 
+    height: 20em;
+}
+.row.playerLife div span { 
+    height: 90%;
+}
+
+.playerLifeControl {
+    cursor: pointer;
+}
+
+.playerLifeControl span {
+    font-size: 5em;
+    margin-left: 50%;
+    margin-top: 15%;
+}
+
+.playerLifeDisplay span {
+    font-size: 10em;
+}
+
+/* PLAYER 1, 3 MODIFICATIONS */
+.player1 {
+    transform: rotate(180deg);
+}
+
+.player1 .playerLifeControl span {
+    margin-left: 35%;
+}
+
+@media (max-width: 400px) {    
+    .playerLifeControl {
+        padding-top: 32%;
+    }
+    
+    .playerLifeControl span,
+    .player1 .playerLifeControl span {
+        font-size: 3em;
+        margin: 0;
+        padding-left: 33px;
+    }
+
+    .playerLifeDisplay {
+        padding-top: 20%;
+    }
+    
+    .playerLifeDisplay span {
+        font-size: 6em;
+        margin-left: -30px;
+    }
+}

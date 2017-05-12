@@ -1,0 +1,22 @@
+<div class="gameContainer col-xs-12 col-md-12">
+    <div *ngFor="let player of players" class="row playerWrapper">
+        <div class="col-xs-12 col-md-12 player player{{player.id}}">
+            <div class="playerName">
+                <button (click)="resetLifeTotal(player)"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                <h3>{{player.name}}</h3>
+                <span class="playerNameLifeView">({{player.name}}: {{player.startLife}})</span>
+            </div>
+            <div class="row playerLife">
+                <div class="col-xs-5 col-md-5 playerLifeControl" (click)="updateLifeTotal('down', player)">
+                    <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span>
+                </div>
+                <div class="col-xs-2 col-md-2 playerLifeDisplay">
+                    <span>{{player.startLife}}</span>
+                </div>
+                <div class="col-xs-5 col-md-5 playerLifeControl" (click)="updateLifeTotal('up', player)">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
